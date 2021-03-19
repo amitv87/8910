@@ -1,0 +1,60 @@
+{
+    "szVersion": "BP_R1.0.0",
+    "szPrdName": "UIX8910_MODEM",
+    "szPrdVersion": "8910 MODULE",
+    "dwMode": 0,
+    "dwFlashType": 1,
+    "dwIsNvBackup": 0,
+    "dwOmaDmProductFlag": 0,
+    "dwIsOmaDm": 1,
+    "dwIsPreload": 1,
+    "szPrdAlias": "@build_target@",
+    "filePathBase": "@out_hex_dir@",
+    "pacFiles": [
+        {
+            "filePath": "fdl1@img_sign_suffix@.img",
+            "fixedSize": "@CONFIG_FDL1_IMAGE_SIZE@",
+            "type": "HOST_FDL",
+            "description": "First download image file",
+            "szFileID": "HOST_FDL",
+            "szFileName": "fdl1@img_sign_suffix@.img",
+            "dwFileFlag": 1,
+            "dwCanOmitFlag": 0,
+            "defaultCheck": 1,
+            "forceCheck": 1,
+            "dwAddress": [
+                "@CONFIG_FDL1_IMAGE_START@"
+            ]
+        },
+        {
+            "filePath": "fdl2@img_sign_suffix@.img",
+            "fixedSize": "@CONFIG_FDL2_IMAGE_SIZE@",
+            "type": "FDL2",
+            "description": "Second download image file",
+            "szFileID": "FDL2",
+            "szFileName": "fdl2@img_sign_suffix@.img",
+            "dwFileFlag": 1,
+            "dwCanOmitFlag": 0,
+            "defaultCheck": 1,
+            "forceCheck": 1,
+            "dwAddress": [
+                "@CONFIG_FDL2_IMAGE_START@"
+            ]
+        },
+        {
+            "filePath": "@build_target@@img_sign_suffix@.img",
+            "fixedSize": "@CONFIG_APPIMG_FLASH_SIZE@",
+            "type": "CODE",
+            "description": "appimg",
+            "szFileID": "APPIMG",
+            "szFileName": "@build_target@@img_sign_suffix@.img",
+            "dwFileFlag": 1,
+            "dwCanOmitFlag": 0,
+            "defaultCheck": 1,
+            "forceCheck": 0,
+            "dwAddress": [
+                "@CONFIG_APPIMG_FLASH_ADDRESS@"
+            ]
+        }
+    ]
+}

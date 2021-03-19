@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"eybpub_run_log.h": "c",
+			"fibo_opencpu.h": "c",
+			"osi_api.h": "c"
+		}
+	}
+}
